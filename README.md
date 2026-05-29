@@ -87,7 +87,11 @@ npm run preview
 
 ## 📸 Screenshot
 
-Tambahkan screenshot aplikasi di sini.
+<img width="1889" height="940" alt="Screenshot 2026-05-30 055609" src="https://github.com/user-attachments/assets/c634dbc2-ba34-4b76-a50b-6294a9b4b4a2" />
+
+<img width="1854" height="944" alt="Screenshot 2026-05-30 055622" src="https://github.com/user-attachments/assets/5c08bb3b-067a-4a3f-ab9f-d182f0b63f75" />
+
+
 
 ---
 
