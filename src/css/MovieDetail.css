@@ -1,0 +1,168 @@
+.movie-detail {
+  min-height: 100vh;
+  color: white;
+  background: #0b0b0b;
+}
+
+.detail-backdrop {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.detail-overlay {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.7)
+  );
+
+  display: flex;
+  align-items: center;
+}
+
+.detail-content {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: auto;
+  padding: 4rem 2rem;
+
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.detail-poster img {
+  width: 320px;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.detail-info {
+  max-width: 700px;
+}
+
+.detail-info h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 1.5rem;
+
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.genres {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  margin-bottom: 2rem;
+}
+
+.genre-tag {
+  padding: 0.6rem 1rem;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 0.9rem;
+}
+
+.detail-overview {
+  line-height: 1.8;
+  color: #d1d1d1;
+
+  margin-bottom: 2rem;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.watch-btn,
+.trailer-btn {
+  border: none;
+
+  padding: 1rem 1.8rem;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.watch-btn {
+  background: #ff2c2c;
+  color: white;
+}
+
+.watch-btn:hover {
+  transform: scale(1.05);
+}
+
+.trailer-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.trailer-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.detail-loading {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background: #0b0b0b;
+}
+
+@media (max-width: 968px) {
+  .detail-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .detail-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .detail-meta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .genres {
+    justify-content: center;
+  }
+
+  .detail-buttons {
+    justify-content: center;
+  }
+
+  .detail-poster img {
+    width: 260px;
+  }
+}

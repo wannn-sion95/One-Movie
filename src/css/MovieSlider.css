@@ -1,0 +1,116 @@
+.movie-slider {
+  margin-bottom: 4rem;
+}
+
+.slider-title {
+  color: white;
+
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+
+  position: relative;
+  display: inline-block;
+}
+
+.slider-title::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 60%;
+  height: 4px;
+
+  border-radius: 20px;
+
+  background: #a82121;
+}
+
+/* SWIPER */
+
+.swiper {
+  overflow: visible !important;
+
+  cursor: grab;
+}
+
+.swiper:active {
+  cursor: grabbing;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* NAVIGATION */
+.movie-slider {
+  position: relative;
+}
+
+/* BUTTON BASE */
+
+.movie-slider .swiper-button-next,
+.movie-slider .swiper-button-prev {
+  width: 42pxpx !important;
+  height: 42px !important;
+
+  border-radius: 50%;
+
+  background-color: rgba(16, 16, 16, 0.85);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(168, 49, 49, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  transition: all 0.3s ease;
+
+  opacity: 0;
+
+  transform: scale(0.1);
+
+  top: 45%;
+}
+
+/* SHOW BUTTON */
+
+.movie-slider:hover .swiper-button-next,
+.movie-slider:hover .swiper-button-prev {
+  opacity: 1;
+
+  transform: scale(0.5);
+}
+
+/* ICON */
+
+.movie-slider .swiper-button-next::after,
+.movie-slider .swiper-button-prev::after {
+  font-size: 0.5rem !important;
+
+  font-weight: 900;
+
+  color: rgb(242, 255, 242);
+}
+
+/* HOVER */
+
+.movie-slider .swiper-button-next:hover,
+.movie-slider .swiper-button-prev:hover {
+  background: #b92323;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 0 25px rgba(221, 33, 33, 0.6);
+}
+
+/* POSITION */
+
+.movie-slider .swiper-button-prev {
+  left: -15px !important;
+}
+
+.movie-slider .swiper-button-next {
+  right: -15px !important;
+}
