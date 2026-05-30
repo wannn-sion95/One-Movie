@@ -1,19 +1,15 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import TrailerModal from "../components/TrailerModal";
-
 import "../css/MovieDetail.css";
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
 function MovieDetail() {
   const { id } = useParams();
   const [trailerKey, setTrailerKey] = useState("");
-
   const [showTrailer, setShowTrailer] = useState(false);
-
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  const API_KEY = "55742c41b8314d37d173c2cdbedfc728";
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -21,16 +17,13 @@ function MovieDetail() {
         const response = await fetch(
           `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`,
         );
-
         const data = await response.json();
-
         setMovie(data);
-        // FETCH TRAILER
 
+        // FETCH TRAILER
         const videoResponse = await fetch(
           `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`,
         );
-
         const videoData = await videoResponse.json();
 
         const trailer = videoData.results.find(

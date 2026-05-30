@@ -13,8 +13,10 @@
   border-radius: 18px;
 }
 
-.movie-card:hover {
-  transform: translateY(-10px) scale(1.03);
+movie-card:hover {
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.75),
+    0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .movie-poster {

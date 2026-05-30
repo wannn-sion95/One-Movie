@@ -70,8 +70,6 @@
   box-sizing: border-box;
 }
 
-/* SECTION */
-
 .movies-section {
   padding: 2rem;
 }
@@ -79,11 +77,9 @@
 .section-title {
   color: white;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
-
-/* EMPTY STATE */
 
 .empty-state {
   min-height: 40vh;
@@ -192,8 +188,8 @@
 }
 
 .movie-count {
-  color: #888;
-  font-size: 0.95rem;
+  color: #aba8a8;
+  font-size: 1rem;
 }
 
 html {

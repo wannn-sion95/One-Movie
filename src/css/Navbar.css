@@ -17,8 +17,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* LOGO */
-
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -46,8 +44,6 @@
   transform: scale(1.03);
 }
 
-/* LINKS */
-
 .navbar-links {
   display: flex;
   align-items: center;
@@ -74,15 +70,11 @@
   transition: all 0.3s ease;
 }
 
-/* HOVER */
-
 .nav-link:hover {
   color: white;
 
   background: rgba(255, 255, 255, 0.08);
 }
-
-/* ACTIVE */
 
 .nav-link.active {
   color: white;
@@ -91,8 +83,6 @@
 
   box-shadow: 0 0 20px rgba(255, 44, 44, 0.15);
 }
-
-/* UNDERLINE EFFECT */
 
 .nav-link::after {
   content: "";
@@ -135,4 +125,244 @@
   .nav-link {
     padding: 0.8rem;
   }
+}
+
+/* NAVBAR RIGHT & SEARCH BOX */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Kondisi saat Search terbuka */
+.search-box.active {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.search-icon-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  width: 0;
+  padding: 0;
+  transition:
+    width 0.3s ease,
+    padding 0.3s ease;
+  outline: none;
+}
+
+/* Lebarkan input saat active */
+.search-box.active .navbar-search-input {
+  width: 220px;
+  padding: 8px 12px 8px 0;
+}
+
+.navbar-search-input::placeholder {
+  color: #999;
+}
+
+/* USER PROFILE CONTAINER */
+.navbar-profile {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative; /* Menjadi jangkar posisi dropdown */
+  padding: 10px 0; /* Area sensitif mouse diperluas agar dropdown tidak gampang hilang */
+}
+
+.profile-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.navbar-profile:hover .profile-avatar {
+  border: 1px solid rgb(240, 11, 11);
+}
+
+/* INDIKATOR SEGITIGA KECIL (CARET) */
+.dropdown-caret {
+  color: white;
+  font-size: 0.6rem;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+/* Putar panah saat dropdown terbuka */
+.dropdown-caret.open {
+  transform: rotate(180deg);
+}
+
+/* KOTAK DROPDOWN */
+.profile-dropdown {
+  position: absolute;
+  top: 100%; /* Pas di bawah navbar */
+  right: 0;
+  padding-top: 10px; /* Jembatan tak terlihat agar cursor gak 'putus' saat turun */
+  z-index: 1000;
+  animation: dropdownFadeIn 0.25s ease-out;
+}
+
+/* SEGITIGA MENU */
+.dropdown-arrow {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 8px solid #141414; /* Warnanya disamakan dengan background menu */
+}
+
+/* LIST MENU */
+.dropdown-list {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background-color: #141414;
+  border: 1px solid #282828;
+  border-radius: 4px;
+  width: 170px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-list li a {
+  display: block;
+  padding: 10px 20px;
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect per baris menu */
+.dropdown-list li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding-left: 24px; /* Efek bergeser sedikit ala modern web */
+}
+
+/* GARIS PEMBATAS */
+.dropdown-divider {
+  height: 1px;
+  background-color: #282828;
+  margin: 8px 0;
+}
+
+/* TOMBOL SIGN OUT */
+.dropdown-list li a.logout-link {
+  font-weight: 600;
+}
+
+.dropdown-list li a.logout-link:hover {
+  color: #ff2c2c;
+  background-color: rgba(255, 44, 44, 0.05);
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .navbar-profile {
+    margin-left: 1rem;
+  }
+
+  .profile-avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown-list {
+    width: 150px;
+    .search-box.active .navbar-search-input {
+      width: 130px;
+      padding: 8px 10px 8px 0;
+    }
+
+    /* Sembunyikan caret (panah bawah) di HP biar ngirit tempat */
+    .dropdown-caret {
+      display: none;
+    }
+  }
+}
+
+/* UPDATE NAVBAR LEFT BIAR SEJAJAR */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Jarak antara Logo dan Menu Home */
+}
+
+/* TOMBOL NOTIFIKASI */
+.notification-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3rem; /* Ukuran disamakan dengan icon search */
+  margin-left: 1rem;
+  cursor: pointer;
+  position: relative; /* Jangkar untuk titik merah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.notification-btn:hover {
+  transform: scale(1.1);
+  color: #d1d1d1;
+}
+
+/* TITIK MERAH NOTIFIKASI ALA NETFLIX */
+.notification-dot {
+  position: absolute;
+  top: 2px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  background-color: #ff2c2c;
+  border-radius: 50%;
+  border: 1px solid rgba(10, 10, 10, 0.9); /* Border gelap biar misah dari lonceng */
 }

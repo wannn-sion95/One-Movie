@@ -5,14 +5,9 @@ import HeroBanner from "../components/HeroBanner";
 import LoadingSkeleton from "../components/LoadingSkeleton";
 import MovieSlider from "../components/MovieSlider";
 import "../css/Home.css";
-import {
-  searchMovies,
-  getPopularMovies,
-  getMoviesByCategory,
-} from "../services/api";
+import { getPopularMovies, getMoviesByCategory } from "../services/api";
 
 function Home() {
-  const [searchQuery, setSearchQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
@@ -30,20 +25,16 @@ function Home() {
   useEffect(() => {
     const loadMovies = async () => {
       try {
-        const popularMovies = await getPopularMovies();
-        const topRated = await getMoviesByCategory("/movie/top_rated");
-        const horror = await getMoviesByCategory(
-          "/discover/movie?with_genres=27",
-        );
-        const comedy = await getMoviesByCategory(
-          "/discover/movie?with_genres=35",
-        );
-        const scifi = await getMoviesByCategory(
-          "/discover/movie?with_genres=878",
-        );
-        const romance = await getMoviesByCategory(
-          "/discover/movie?with_genres=10749",
-        );
+        // Menggunakan Promise.all agar semua request berjalan bersamaan
+        const [popularMovies, topRated, horror, comedy, scifi, romance] =
+          await Promise.all([
+            getPopularMovies(),
+            getMoviesByCategory("/movie/top_rated"),
+            getMoviesByCategory("/discover/movie?with_genres=27"),
+            getMoviesByCategory("/discover/movie?with_genres=35"),
+            getMoviesByCategory("/discover/movie?with_genres=878"),
+            getMoviesByCategory("/discover/movie?with_genres=10749"),
+          ]);
 
         // SET STATES
         setMovies(popularMovies);
@@ -57,7 +48,6 @@ function Home() {
         setError(null);
       } catch (err) {
         console.log(err);
-
         setError("Failed to load movies. Please try again later.");
       } finally {
         setLoading(false);
@@ -67,8 +57,7 @@ function Home() {
     loadMovies();
   }, []);
 
-  // Slide tiap film bannner tiaop 5 detik
-
+  // Slide tiap film banner tiap 5 detik
   useEffect(() => {
     if (movies.length === 0) return;
 
@@ -79,49 +68,8 @@ function Home() {
     return () => clearInterval(interval);
   }, [movies]);
 
-  // Search kendali
-  const handleSearch = async (e) => {
-    e.preventDefault();
-
-    if (!searchQuery.trim()) return;
-
-    if (loading) return;
-
-    setLoading(true);
-
-    try {
-      const searchResults = await searchMovies(searchQuery);
-
-      setMovies(searchResults);
-
-      setError(null);
-    } catch (err) {
-      console.log(err);
-
-      setError("Failed to search movies. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="home">
-      {/* SEARCH */}
-      <section className="search-section">
-        <form onSubmit={handleSearch} className="search-form">
-          <input
-            type="text"
-            placeholder="Search movies..."
-            className="search-input"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-
-          <button type="submit" className="search-btn">
-            Search
-          </button>
-        </form>
-      </section>
       {/* HERO BANNER */}
       {!loading && movies.length > 0 && (
         <HeroBanner movie={movies[heroMovieIndex]} />
@@ -131,15 +79,10 @@ function Home() {
       {!loading && (
         <div className="slider-section">
           <MovieSlider title=" Trending Now" movies={trendingMovies} />
-
           <MovieSlider title=" Top Rated" movies={topRatedMovies} />
-
           <MovieSlider title=" Horror Movies" movies={horrorMovies} />
-
           <MovieSlider title=" Comedy Movies" movies={comedyMovies} />
-
           <MovieSlider title=" Sci-Fi Movies" movies={scifiMovies} />
-
           <MovieSlider title=" Romance Movies" movies={romanceMovies} />
         </div>
       )}
@@ -150,9 +93,7 @@ function Home() {
       {/* MAIN MOVIES */}
       <section className="movies-section">
         <div className="section-header">
-          <h2 className="section-title">
-            {searchQuery ? "Search Results" : "Popular Movies"}
-          </h2>
+          <h2 className="section-title">Popular Movies</h2>
 
           {!loading && (
             <span className="movie-count">{movies.length} Movies</span>
@@ -178,8 +119,7 @@ function Home() {
         ) : (
           <div className="empty-state">
             <h2>No Movies Found 🎬</h2>
-
-            <p>Try searching another movie title.</p>
+            <p>Check your internet connection or API settings.</p>
           </div>
         )}
       </section>

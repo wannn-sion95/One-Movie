@@ -1,95 +1,137 @@
+/* BACKGROUND UTAMA */
 .footer {
-  margin-top: 5rem;
   background: #090909;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 4rem;
 }
 
+/* GRID LAYOUT UNTUK PC */
 .footer-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem 2rem;
 
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+/* === KOLOM KIRI (BRAND) === */
+.footer-brand {
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* KUNCI PERBAIKAN: Paksa semua anak rata kiri */
+  text-align: left;
+}
+
+.footer-logo-wrapper {
+  display: flex;
   align-items: center;
-
-  text-align: center;
-}
-
-.footer-logo {
-  font-size: 2rem;
+  justify-content: flex-start; /* Pastikan logo nempel kiri */
+  gap: 0.8rem;
   margin-bottom: 1rem;
-  letter-spacing: 2px;
 }
 
-.footer-logo span {
+.footer-logo-icon {
   color: #ff2c2c;
+  font-size: 2rem;
 }
 
-.footer-description {
-  max-width: 600px;
+.footer-logo-wrapper h2 {
+  font-family: var(--heading, "Montserrat", sans-serif);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.footer-quote {
   color: #a1a1a1;
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+  text-align: left; /* Teks quote dipaksa rata kiri */
 }
 
+.footer-socials {
+  display: flex;
+  justify-content: flex-start; /* Icon sosmed dipaksa rata kiri */
+  gap: 1rem;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #ff2c2c;
+  transform: translateY(-4px);
+}
+
+/* === KOLOM TENGAH & KANAN (LINKS) === */
 .footer-links {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start; /* Paksa link rata kiri */
+  text-align: left;
+  gap: 1.2rem;
+}
 
-  margin-bottom: 2rem;
+.footer-links h3 {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 0.5rem;
 }
 
 .footer-links a {
-  color: #d1d1d1;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #888;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  width: fit-content;
 }
 
 .footer-links a:hover {
-  color: #ff2c2c;
+  color: white;
 }
 
+/* === COPYRIGHT BOTTOM LINE === */
 .footer-bottom {
-  color: #777;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #666;
   font-size: 0.9rem;
 }
 
-/* MOBILE */
-
+/* === RESPONSIVE MOBILE === */
 @media (max-width: 768px) {
   .footer-container {
-    padding: 3rem 1rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
-  .footer-logo {
-    font-size: 1.5rem;
-  }
-
+  /* Di HP, semuanya ditarik lagi ke tengah biar rapi */
+  .footer-brand,
   .footer-links {
-    gap: 1rem;
+    align-items: center;
+    text-align: center;
   }
-}
 
-.footer {
-  position: relative;
-  overflow: hidden;
-}
+  .footer-logo-wrapper,
+  .footer-socials {
+    justify-content: center;
+  }
 
-.footer::before {
-  content: "";
-
-  position: absolute;
-  top: -100px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 300px;
-  height: 300px;
-
-  background: rgba(255, 0, 0, 0.08);
-
-  filter: blur(100px);
+  .footer-quote {
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+  }
 }
