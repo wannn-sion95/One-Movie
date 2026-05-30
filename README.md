@@ -1,111 +1,329 @@
-# 🎬 One Movie
+<div align="center">
 
-OneMovie adalah aplikasi web streaming film & Series Tv modern yang terinspirasi oleh Netflix, dibangun menggunakan React dan Vite. Aplikasi ini menyediakan antarmuka yang responsif, cepat, dan mudah digunakan untuk menjelajahi berbagai film dan serial.
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=E50914&height=200&section=header&text=OneMovie&fontSize=80&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Modern%20Streaming%20Platform%20Inspired%20by%20Netflix&descAlignY=55&descAlign=50" width="100%" />
+
+  <br/>
+
+  <!-- Badges -->
+  <a href="#"><img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=20232A" alt="React"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white&labelColor=1a1a2e" alt="Vite"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white&labelColor=0f172a" alt="Tailwind"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/TMDB_API-Integrated-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white&labelColor=032541" alt="TMDB"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=16a34a" alt="License"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Active-E50914?style=for-the-badge&logo=statuspage&logoColor=white" alt="Status"/></a>
+
+  <br/><br/>
+
+  <p>
+    <a href="#-demo"><strong>View Demo »</strong></a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#-fitur-unggulan"><strong>Features</strong></a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#%EF%B8%8F-instalasi"><strong>Quick Start</strong></a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="#-screenshot">Screenshots</a>
+  </p>
+
+  <br/>
+
+  > 🎬 **OneMovie** adalah platform streaming modern yang menghadirkan pengalaman menonton film & serial TV layaknya Netflix — dibangun dengan teknologi web terkini.
+
+</div>
 
 ---
 
-## 🚀 Fitur
+## 📋 Daftar Isi
 
-- 🎥 Menampilkan daftar film & Series Tv populer
-- 🔍 Pencarian film & Series
-- 📄 Detail film & Series Tv lengkap
-- ⭐ Rating dan informasi film & Series
-- 📱 Responsive Design
-- ⚡ Performa tinggi dengan Vite
-- 🎨 UI modern ala Netflix
+- [Demo](#-demo)
+- [Tentang Project](#-tentang-project)
+- [Fitur Unggulan](#-fitur-unggulan)
+- [Tech Stack](#-tech-stack)
+- [Screenshot](#-screenshot)
+- [Struktur Project](#-struktur-project)
+- [Instalasi](#%EF%B8%8F-instalasi)
+- [Environment Variables](#-environment-variables)
+- [Build & Deploy](#-build--deploy)
+- [Developer](#-developer)
+- [License](#-license)
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🌐 Demo
 
-- React.js
-- Vite
-- JavaScript / TypeScript
-- CSS / Tailwind CSS
-- TMDB API (jika digunakan)
-- Axios
+<div align="center">
+
+| Platform | Link |
+|:--------:|:----:|
+| 🔴 Live Demo | [onemovie.vercel.app](https://your-demo-link.vercel.app) |
+| 📁 Repository | [github.com/username/onemovie](https://github.com/username/onemovie) |
+
+</div>
+
+---
+
+## 🎯 Tentang Project
+
+**OneMovie** hadir sebagai platform streaming web yang modern, responsif, dan berperforma tinggi. Project ini dibangun sebagai media pembelajaran mendalam tentang ekosistem **React + Vite**, dengan fokus pada:
+
+- 🏗️ **Arsitektur komponen** yang scalable dan maintainable
+- 🎨 **UI/UX design** terinspirasi platform streaming premium
+- ⚡ **Optimasi performa** menggunakan build tool generasi terbaru
+- 🔗 **Integrasi REST API** nyata dengan TMDB
+
+---
+
+## ✨ Fitur Unggulan
+
+<table>
+  <tr>
+    <td>🎥</td>
+    <td><strong>Trending & Popular</strong></td>
+    <td>Tampilkan film & serial TV populer secara real-time dari TMDB</td>
+  </tr>
+  <tr>
+    <td>🔍</td>
+    <td><strong>Smart Search</strong></td>
+    <td>Pencarian film & serial dengan hasil instan dan relevan</td>
+  </tr>
+  <tr>
+    <td>📄</td>
+    <td><strong>Detail Lengkap</strong></td>
+    <td>Sinopsis, cast, rating, genre, durasi, dan trailer lengkap</td>
+  </tr>
+  <tr>
+    <td>⭐</td>
+    <td><strong>Rating & Review</strong></td>
+    <td>Informasi skor dan ulasan dari komunitas global</td>
+  </tr>
+  <tr>
+    <td>📱</td>
+    <td><strong>Fully Responsive</strong></td>
+    <td>Optimal di semua perangkat — mobile, tablet, dan desktop</td>
+  </tr>
+  <tr>
+    <td>⚡</td>
+    <td><strong>Blazing Fast</strong></td>
+    <td>Build dengan Vite untuk waktu loading dan HMR yang super cepat</td>
+  </tr>
+  <tr>
+    <td>🎨</td>
+    <td><strong>Netflix-style UI</strong></td>
+    <td>Antarmuka gelap, elegan, dan modern ala platform streaming premium</td>
+  </tr>
+  <tr>
+    <td>🗂️</td>
+    <td><strong>Category Browse</strong></td>
+    <td>Jelajahi konten berdasarkan genre, tahun, dan kategori</td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Category | Technology |
+|:--------:|:----------:|
+| **Frontend** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) |
+| **Language** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) |
+| **Styling** | ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) |
+| **HTTP Client** | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white) |
+| **Data Source** | ![TMDB](https://img.shields.io/badge/TMDB_API-032541?style=flat-square&logo=themoviedatabase&logoColor=01B4E4) |
+| **Package Manager** | ![NPM](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white) |
+
+</div>
+
+---
+
+## 📸 Screenshot
+
+<div align="center">
+
+### 🏠 Homepage
+<img src="https://github.com/user-attachments/assets/1e7bd30c-0e33-4def-a2d4-d26cf536c08b" width="100%" alt="Homepage - OneMovie" style="border-radius: 8px;"/>
+
+<br/><br/>
+
+### 🎬 Daftar Film & Serial
+<img src="https://github.com/user-attachments/assets/5c08bb3b-067a-4a3f-ab9f-d182f0b63f75" width="100%" alt="Movie List - OneMovie" style="border-radius: 8px;"/>
+
+<br/><br/>
+
+### 📋 Detail Film
+<img src="https://github.com/user-attachments/assets/ef4ef09f-a70b-4ad1-825b-bc2dc5e69343" width="100%" alt="Movie Detail - OneMovie" style="border-radius: 8px;"/>
+
+<br/><br/>
+
+### 🔍 Halaman Pencarian
+<img src="https://github.com/user-attachments/assets/53e3ad9e-8217-48e7-9ab4-56799d7a6aa6" width="100%" alt="Search Page - OneMovie" style="border-radius: 8px;"/>
+
+</div>
 
 ---
 
 ## 📂 Struktur Project
 
-```bash
-src/
+```
+one-movie/
 │
-├── assets/
-├── components/
-├── pages/
-├── services/
-├── hooks/
-├── styles/
-└── App.jsx
+├── 📁 public/                  # Static assets
+│   └── favicon.ico
+│
+├── 📁 src/
+│   ├── 📁 assets/              # Images, fonts, icons
+│   ├── 📁 components/          # Reusable UI components
+│   │   ├── Navbar/
+│   │   ├── MovieCard/
+│   │   ├── HeroSection/
+│   │   └── ...
+│   ├── 📁 pages/               # Route-level pages
+│   │   ├── Home/
+│   │   ├── MovieDetail/
+│   │   ├── Search/
+│   │   └── ...
+│   ├── 📁 services/            # API calls & integrations
+│   │   └── tmdb.js
+│   ├── 📁 hooks/               # Custom React hooks
+│   ├── 📁 styles/              # Global styles
+│   ├── 📁 utils/               # Helper functions
+│   ├── App.jsx                 # Root component
+│   └── main.jsx                # Entry point
+│
+├── .env.example                # Environment variables template
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
 
 ---
 
 ## ⚙️ Instalasi
 
-Clone repository:
+> **Prerequisites:** Pastikan kamu sudah menginstall [Node.js](https://nodejs.org/) (v18+) dan npm.
 
+**1. Clone repository**
 ```bash
-git clone https://github.com/username/movieflix.git
+git clone https://github.com/username/one-movie.git
 ```
 
-Masuk ke folder project:
-
+**2. Masuk ke direktori project**
 ```bash
-cd movieflix
+cd one-movie
 ```
 
-Install dependencies:
-
+**3. Install dependencies**
 ```bash
 npm install
 ```
 
-Jalankan aplikasi:
+**4. Setup environment variables**
+```bash
+cp .env.example .env
+```
+> Isi `.env` dengan API key kamu (lihat bagian [Environment Variables](#-environment-variables))
 
+**5. Jalankan development server**
 ```bash
 npm run dev
 ```
 
+🚀 Buka browser dan akses **`http://localhost:5173`**
+
 ---
 
-## 🌐 Build Production
+## 🔑 Environment Variables
 
+Buat file `.env` di root project, lalu isi dengan konfigurasi berikut:
+
+```env
+# TMDB API Key
+# Daftar gratis di https://www.themoviedb.org/settings/api
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+VITE_TMDB_BASE_URL=https://api.themoviedb.org/3
+VITE_TMDB_IMAGE_URL=https://image.tmdb.org/t/p
+```
+
+> 💡 **Tip:** Dapatkan TMDB API key gratis di [themoviedb.org](https://www.themoviedb.org/settings/api)
+
+---
+
+## 📦 Build & Deploy
+
+**Build untuk production:**
 ```bash
 npm run build
 ```
 
-Preview hasil build:
-
+**Preview hasil build secara lokal:**
 ```bash
 npm run preview
 ```
 
----
+**Deploy ke Vercel (rekomendasi):**
+```bash
+# Install Vercel CLI
+npm install -g vercel
 
-## 📸 Screenshot
+# Deploy
+vercel --prod
+```
 
-<img width="1904" height="947" alt="Screenshot 2026-05-30 203117" src="https://github.com/user-attachments/assets/1e7bd30c-0e33-4def-a2d4-d26cf536c08b" />
-
-<img width="1854" height="944" alt="Screenshot 2026-05-30 055622" src="https://github.com/user-attachments/assets/5c08bb3b-067a-4a3f-ab9f-d182f0b63f75" />
-
-<img width="1909" height="943" alt="Screenshot 2026-05-30 203250" src="https://github.com/user-attachments/assets/ef4ef09f-a70b-4ad1-825b-bc2dc5e69343" />
-
-<img width="1902" height="946" alt="Screenshot 2026-05-30 203240" src="https://github.com/user-attachments/assets/53e3ad9e-8217-48e7-9ab4-56799d7a6aa6" />
-
-
-
+> ✅ Project ini siap di-deploy ke **Vercel**, **Netlify**, maupun **GitHub Pages**.
 
 ---
 
 ## 👨‍💻 Developer
 
-Dikembangkan oleh Ridwan sebagai proyek pembelajaran React + Vite.
+<div align="center">
+  <a href="https://github.com/username">
+    <img src="https://github.com/username.png" width="80" style="border-radius: 50%" alt="Ridwan"/>
+  </a>
+  <br/>
+  <strong>Ridwan</strong>
+  <br/>
+  <sub>Full-Stack Developer · React Enthusiast</sub>
+  <br/><br/>
+  <a href="https://github.com/username">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="https://linkedin.com/in/username">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</div>
+
+<br/>
+
+> Dikembangkan dengan ❤️ sebagai proyek eksplorasi **React + Vite** — dari belajar hingga membangun sesuatu yang nyata.
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi, issue, dan feature request sangat diterima!
+
+1. **Fork** repository ini
+2. Buat branch fitur baru: `git checkout -b feature/NamaFitur`
+3. Commit perubahan: `git commit -m 'feat: tambah NamaFitur'`
+4. Push ke branch: `git push origin feature/NamaFitur`
+5. Buka **Pull Request**
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+Distributed under the **MIT License** — bebas digunakan, dimodifikasi, dan didistribusikan.
+
+See [`LICENSE`](./LICENSE) for more information.
+
+---
+
+<div align="center">
+
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=E50914&height=100&section=footer" width="100%" />
+
+  <sub>⭐ Jangan lupa kasih bintang kalau project ini bermanfaat!</sub>
+
+</div>
