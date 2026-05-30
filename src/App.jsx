@@ -8,10 +8,12 @@ import Footer from "./components/Footer";
 import MovieDetail from "./pages/MovieDetail";
 import Shows from "./pages/Shows";
 import TVDetail from "./pages/TVDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <main className="main-content">
         <Routes>
