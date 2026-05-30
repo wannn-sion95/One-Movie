@@ -277,25 +277,26 @@ vercel --prod
 ## 👨‍💻 Developer
 
 <div align="center">
-  <a href="https://github.com/username">
-    <img src="https://github.com/username.png" width="80" style="border-radius: 50%" alt="Ridwan"/>
+  <a href="https://github.com/wannn-sion95">
+    <img width="4096" height="2304" alt="1323453" src="https://github.com/user-attachments/assets/6f5d64fb-a9ea-406f-8c88-d91f108f5536" />
+
   </a>
   <br/>
-  <strong>Ridwan</strong>
+  <strong>Wannn Sion (Mhd. Ridwan)</strong>
   <br/>
   <sub>Full-Stack Developer · React Enthusiast</sub>
   <br/><br/>
-  <a href="https://github.com/username">
+  <a href="https://github.com/wannn-sion95">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
-  <a href="https://linkedin.com/in/username">
+  <a href="https://linkedin.com/in/mhd-ridwan">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
 </div>
 
 <br/>
 
-> Dikembangkan dengan ❤️ sebagai proyek eksplorasi **React + Vite** — dari belajar hingga membangun sesuatu yang nyata.
+> Dikembangkan dengan semangat sebagai proyek eksplorasi **React + Vite** — dari belajar hingga membangun sesuatu yang nyata.
 
 ---
 
