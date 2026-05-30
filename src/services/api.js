@@ -23,3 +23,15 @@ export const getMoviesByCategory = async (endpoint) => {
   const data = await response.json();
   return data.results;
 };
+// Series (Shows Tv)
+export const getPopularShows = async () => {
+  const response = await fetch(`${BASE_URL}/tv/popular?api_key=${API_KEY}`);
+  const data = await response.json();
+  return data.results;
+};
+
+export const getShowsByCategory = async (endpoint) => {
+  const response = await fetch(`${BASE_URL}${endpoint}&api_key=${API_KEY}`);
+  const data = await response.json();
+  return data.results;
+};

@@ -1,22 +1,15 @@
 import "../css/MovieCard.css";
-
 import { motion } from "framer-motion";
-
 import { FaHeart, FaStar } from "react-icons/fa";
-
 import { Link } from "react-router-dom";
-
 import { useMovieContext } from "../contexts/MovieContext";
 
 function MovieCard({ movie }) {
   const { isFavorite, addToFavorites, removeFromFavorites } = useMovieContext();
-
   const favorite = isFavorite(movie.id);
 
-  // HANDLE FAVORITE
   const handleFavorite = (e) => {
     e.preventDefault();
-
     if (favorite) {
       removeFromFavorites(movie.id);
     } else {
@@ -24,8 +17,15 @@ function MovieCard({ movie }) {
     }
   };
 
+  // DETEKSI OTOMATIS: Apakah ini TV Show atau Movie?
+  const isTvShow = movie.first_air_date || movie.media_type === "tv";
+
   return (
-    <Link to={`/movie/${movie.id}`} className="movie-card-link">
+    // LINK DINAMIS: Kalau TV Show arahkan ke /tv/, kalau bukan arahkan ke /movie/
+    <Link
+      to={isTvShow ? `/tv/${movie.id}` : `/movie/${movie.id}`}
+      className="movie-card-link"
+    >
       <motion.div
         className="movie-card"
         whileHover={{
@@ -59,7 +59,6 @@ function MovieCard({ movie }) {
 
             <div className="movie-rating">
               <FaStar />
-
               <span>{movie.vote_average?.toFixed(1)}</span>
             </div>
           </div>
@@ -68,7 +67,6 @@ function MovieCard({ movie }) {
         {/* INFO */}
         <div className="movie-info">
           <h3>{movie.title}</h3>
-
           <p>{movie.release_date?.split("-")[0]}</p>
         </div>
       </motion.div>
@@ -77,4 +75,3 @@ function MovieCard({ movie }) {
 }
 
 export default MovieCard;
-  
