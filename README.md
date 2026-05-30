@@ -1,15 +1,15 @@
 # 🎬 One Movie
 
-OneMovie adalah aplikasi web streaming film modern yang terinspirasi oleh Netflix, dibangun menggunakan React dan Vite. Aplikasi ini menyediakan antarmuka yang responsif, cepat, dan mudah digunakan untuk menjelajahi berbagai film dan serial.
+OneMovie adalah aplikasi web streaming film & Series Tv modern yang terinspirasi oleh Netflix, dibangun menggunakan React dan Vite. Aplikasi ini menyediakan antarmuka yang responsif, cepat, dan mudah digunakan untuk menjelajahi berbagai film dan serial.
 
 ---
 
 ## 🚀 Fitur
 
-- 🎥 Menampilkan daftar film populer
-- 🔍 Pencarian film
-- 📄 Detail film lengkap
-- ⭐ Rating dan informasi film
+- 🎥 Menampilkan daftar film & Series Tv populer
+- 🔍 Pencarian film & Series
+- 📄 Detail film & Series Tv lengkap
+- ⭐ Rating dan informasi film & Series
 - 📱 Responsive Design
 - ⚡ Performa tinggi dengan Vite
 - 🎨 UI modern ala Netflix
