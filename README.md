@@ -278,7 +278,7 @@ vercel --prod
 
 <div align="center">
   <a href="https://github.com/wannn-sion95">
-    <img width="4096" height="2304" alt="1323453" src="https://github.com/user-attachments/assets/6f5d64fb-a9ea-406f-8c88-d91f108f5536" />
+<img width="2000" height="2000" alt="WANNN sION" src="https://github.com/user-attachments/assets/414a610b-8f02-4ecc-89fb-f140faa6d3ad" />
 
   </a>
   <br/>
