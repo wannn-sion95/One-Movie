@@ -145,17 +145,16 @@
 
 <br/><br/>
 
-### 🎬 Daftar Film & Serial
+### 🎬 Daftar Film 
 <img src="https://github.com/user-attachments/assets/5c08bb3b-067a-4a3f-ab9f-d182f0b63f75" width="100%" alt="Movie List - OneMovie" style="border-radius: 8px;"/>
 
 <br/><br/>
 
-### 📋 Detail Film
+### 📋 Serial Tv 
 <img src="https://github.com/user-attachments/assets/ef4ef09f-a70b-4ad1-825b-bc2dc5e69343" width="100%" alt="Movie Detail - OneMovie" style="border-radius: 8px;"/>
 
 <br/><br/>
 
-### 🔍 Halaman Pencarian
 <img src="https://github.com/user-attachments/assets/53e3ad9e-8217-48e7-9ab4-56799d7a6aa6" width="100%" alt="Search Page - OneMovie" style="border-radius: 8px;"/>
 
 </div>
