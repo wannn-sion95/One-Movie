@@ -19,7 +19,6 @@ Platform web streaming film dan serial TV berbasis antarmuka modern yang terinte
 ## Live Demo & Repository
 
 - **Live Demo**: [onemovie.vercel.app](https://one-movie-nine.vercel.app/)
-- **Repository**: [github.com/wannn-sion95/one-movie](https://github.com/wannn-sion95/one-movie)
 
 ---
 
